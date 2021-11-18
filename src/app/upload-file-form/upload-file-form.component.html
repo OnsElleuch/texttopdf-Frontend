@@ -1,0 +1,66 @@
+<form #fileForm="ngForm">
+  <div class="file-upload">
+    <div class="file-select">
+      <div class="file-select-button" id="fileName">Choose File</div>
+      <div class="file-select-name" id="noFile">{{fileName}}</div>
+      <input
+        required
+        type="file"
+        class="file-upload"
+        name="chooseFile"
+        id="chooseFile"
+        (change)="onFileUpload($event)"
+      />
+    </div>
+  </div>
+  &nbsp; 
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputAuthor"
+      placeholder="Enter Author Name"
+      [(ngModel)]="name"
+      [ngModelOptions]="{standalone: true}"
+    />
+  </div>
+  &nbsp; 
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputTitle"
+      placeholder="Enter Title"
+      [(ngModel)]="title"
+      [ngModelOptions]="{standalone: true}"
+    />
+  </div>
+  &nbsp; 
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputSubject"
+      placeholder="Enter Subject"
+      [(ngModel)]="subject"
+      [ngModelOptions]="{standalone: true}"
+    />
+  </div>
+  &nbsp; 
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputKeywords"
+      placeholder="Enter Keywords"
+      [(ngModel)]="keywords"
+      [ngModelOptions]="{standalone: true}"
+    />
+  </div>
+  &nbsp; 
+  <div class="form-group" (click)="onSubmit()">
+    <input style="margin-top: 15px; text-align: center;"type="button" class="form-control btn btn-primary" value="Submit" />
+    &nbsp; 
+  </div>
+  
+</form>
